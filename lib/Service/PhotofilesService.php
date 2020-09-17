@@ -149,6 +149,10 @@ class PhotofilesService {
         }
     }
 
+    public function deleteByUserId($userId) {
+        $this->photoMapper->deleteAll($userId);
+    }
+
     public function deleteByFile(Node $file) {
         $this->photoMapper->deleteByFileId($file->getId());
     }
